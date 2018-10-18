@@ -8,6 +8,8 @@ import thunk from 'redux-thunk'
 import reducers from './reducer'
 
 import AuthRoute from './component/authRoute/authRoute'
+import BossInfo from './container/bossInfo/bossInfo'
+import GeniusInfo from './container/geniusInfo/geniusInfo'
 import Login from './container/login/login'
 import Register from './container/register/register'
 import './config'
@@ -23,6 +25,8 @@ ReactDOM.render(
     <BrowserRouter>
       <Fragment>
         <AuthRoute />
+        <Route path='/bossInfo' component={BossInfo}/>
+        <Route path='/geniusInfo' component={GeniusInfo}/>
         <Route path='/login' component={Login}/>
         <Route path='/register' component={Register}/>
       </Fragment>
